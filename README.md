@@ -1,0 +1,4 @@
+# SuicidesRates
+Rshiny Dashboard
+
+
