@@ -27,7 +27,16 @@ ui <- dashboardPage(dashboardHeader(
                       #            choices = countries)
                     ),
                     dashboardBody(
-                      tabsetPanel(id = "tabs",
+                     tabsetPanel(id = "tabs",
+                                  tabPanel(
+                                    "Global Suicide Rates",
+                                    fluidRow(plotOutput("plot10")),
+                                    br(),
+                                    fluidRow(column(6,plotOutput("plot11")),
+                                             column(6,plotOutput("plot12"))),
+                                    br(),
+                                    fluidRow(column(6,plotOutput("plot13")),
+                                             column(6,plotOutput("plot14")))),                                  
                       tabPanel(
                         "Suicide Per Country",
                         value = 'suicideSummary',
@@ -45,5 +54,6 @@ ui <- dashboardPage(dashboardHeader(
                                br(),
                                fluidRow(column(6,plotOutput("plot8")),
                                         column(6,plotOutput("plot9"))))
+                      
                       
                     )))
